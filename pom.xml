@@ -31,18 +31,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
-            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-            <version>4.0.0-RC1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.shardingsphere</groupId>
-            <artifactId>sharding-core-common</artifactId>
-            <version>4.0.0-RC1</version>
-        </dependency>
-
-        <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>core</artifactId>
             <version>3.3.2</version>
@@ -120,6 +108,11 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>2.6.0</version>
+        </dependency>
+        <!-- springboot整合redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

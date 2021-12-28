@@ -4,8 +4,17 @@ spring:
       enabled: false
     initialize-schema: always
     #table-prefix: batch
-  datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://127.0.0.1:3306/db_base?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
-    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: pyz_demo
+  redis:
+    host: 127.0.0.1
+    port: 6371
+    timeout: 20000
+    cluster:
+      nodes: 127.0.0.1:6372,127.0.0.1:6373
+      maxRedirects: 6
+    pool:
+      max-active: 8
+      min-idle: 0
+      max-idle: 8
+      max-wait: -1
