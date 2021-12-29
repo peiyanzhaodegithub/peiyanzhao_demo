@@ -14,11 +14,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-/**
- * redis配置类
- *
- * @author zcc ON 2018/3/19
- **/
+
 @Configuration
 @EnableCaching//开启注解
 public class RedisConfig {
@@ -26,12 +22,6 @@ public class RedisConfig {
     public CacheManager cacheManager(RedisConnectionFactory factory) {
         RedisCacheManager cacheManager = RedisCacheManager.create(factory);
         return cacheManager;
-        /*RedisCacheManager rcm = new RedisCacheManager(redisTemplate);
-        // 多个缓存的名称,目前只定义了一个
-        rcm.setCacheNames(Arrays.asList("thisredis"));
-        //设置缓存默认过期时间(秒)
-        rcm.setDefaultExpiration(600);
-        return rcm;*/
     }
     // 以下两种redisTemplate自由根据场景选择
     @Bean
